@@ -5,7 +5,7 @@ YouTube
 for more information about selenium, please visit:
 https://selenium-python.readthedocs.io/
 """
-#pipenv run python main.py --visits 2 --url https://www.youtube.com/watch?v=qupdJ06GD6M --verbose
+#pipenv run python main.py --visits 200 --url https://www.youtube.com/watch?v=s63Reed08U0 --verbose
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By

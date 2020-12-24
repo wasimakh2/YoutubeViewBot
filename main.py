@@ -10,7 +10,10 @@ from youtube import YouTube
 
 import utils
 from http_request_randomizer.requests.proxy.requestProxy import RequestProxy
-
+#  "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
+#             "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt",
+#             "https://api.proxyscrape.com/?request=getproxies&proxytype=socks4&timeout=9000&ssl=yes",
+#             "https://www.proxy-list.download/api/v1/get?type=socks4"
 class Bot:
     """ A bot to increase YouTube views """
     # pylint: disable=R0903,R0912
@@ -43,11 +46,16 @@ class Bot:
         proxies = req_proxy.get_proxy_list() #this will create proxy list
         print(len(proxies))
         allproxycount=len(proxies)
+        
         i=0
         while count <= self.opts.visits:
             try:
                 
                 PROXY = proxies[i].get_address()
+                if i>=allproxycount:
+                    proxies = req_proxy.get_proxy_list() #this will create proxy list
+                    print(len(proxies))
+                    allproxycount=len(proxies)
                 i=i+1
                 if self.opts.enable_tor:
                     ipaddr = utils.get_new_tor_ipaddr(proxy=self.opts.proxy)
