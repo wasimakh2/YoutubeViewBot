@@ -95,7 +95,7 @@ class YoutubeVedios:
         print("All videos Liked !!")
 
 
-channel_videos_link = 'https://www.youtube.com/channel/UCS9nmu42YqXQSUloS94ewdQ'
+channel_videos_link = 'https://www.youtube.com/channel/UCS9nmu42YqXQSUloS94ewdQ/videos'
 
 username=""
 password=""
