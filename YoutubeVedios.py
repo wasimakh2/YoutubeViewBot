@@ -107,5 +107,5 @@ youtubeLinks=auto_user.get_all_links()
 
 for video in youtubeLinks:
     print(str(video))
-    os.system("pipenv run python main.py --visits 1 --url "+str(video)+" --verbose ")
+    os.system("python3 main.py --visits 1 --url "+str(video)+" --verbose ")
 
